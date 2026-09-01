@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Médica NovaSalud | Cuidado Integral y turnos en CABA</title>
+    <meta name="description" content="Centro médico de alta complejidad en CABA. Atención en cardiología, pediatría, traumatología y diagnóstico por imágenes. Turnos inmediatos por WhatsApp.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.novasaludclinica.com/">
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.novasaludclinica.com/">
+    <meta property="og:title" content="Clínica Médica NovaSalud | Atención Médica Integral">
+    <meta property="og:description" content="Consultorios médicos de alta complejidad, diagnóstico por imágenes y atención personalizada en CABA.">
+    <meta property="og:image" content="https://www.novasaludclinica.com/images/og-share-novasalud.jpg">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clínica Médica NovaSalud">
+    <meta name="twitter:description" content="Especialidades médicas y turnos inmediatos.">
+    <meta name="twitter:image" content="https://www.novasaludclinica.com/images/og-share-novasalud.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de Estilos Separada -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!-- Script Separado -->
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Clínica Médica NovaSalud",
+  "image": "https://www.novasaludclinica.com/images/fachada.jpg",
+  "@id": "https://www.novasaludclinica.com/#clinic",
+  "url": "https://www.novasaludclinica.com",
+  "telephone": "+541145678900",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Corrientes 1234",
+    "addressLocality": "Ciudad Autónoma de Buenos Aires",
+    "postalCode": "C1043",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.6037389,
+    "longitude": -58.3841506
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "medicalSpecialty": [
+    "GeneralPractice",
+    "Cardiovascular",
+    "Pediatric",
+    "Dermatology",
+    "DiagnosticImaging",
+    "Orthopedic"
+  ]
+}
+</script>
+</head>
+<body>
+
+    <!-- NOTIFICACIÓN FLOTANTE (TOAST JS) -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Dato copiado al portapapeles</span>
+    </div>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="container topbar-container">
+            <div class="topbar-info">
+                <!-- Estado en vivo calculado por JS -->
+                <span id="live-status" class="status-badge">
+                    <span class="status-dot"></span> Verificando estado...
+                </span>
+                <span class="topbar-item"><i class="fa-solid fa-clock"></i> Lun a Sáb: 08:00 - 20:00</span>
+            </div>
+            <div class="topbar-actions">
+                <a href="tel:+5491145678900"><i class="fa-solid fa-phone"></i> +54 11 4567-8900</a>
+                <a href="https://wa.me/5491145678900" target="_blank" class="highlight-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                    <span class="brand-name">Nova<span>Salud</span></span>
+                    <p class="brand-subtitle">Centro Médico Especializado</p>
+                </div>
+            </div>
+
+            <!-- Botón Hamburguesa Móvil -->
+            <button id="menu-btn" class="menu-btn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+    <main id="main-content">        <!-- Menú de Navegación -->
+            <nav id="nav-links" class="nav-links">
+                <a href="#inicio" rel="noopener noreferrer" type="button" class="nav-link active" target="_blank" >Inicio</a>
+                <a href="#nosotros" rel="noopener noreferrer" type="button" class="nav-link" target="_blank">Nosotros</a>
+                <a href="#servicios" rel="noopener noreferrer" type="button" class="nav-link" target="_blank">Servicios</a>
+                <a href="#multimedia" rel="noopener noreferrer" type="button" class="nav-link" target="_blank">Instalaciones</a>
+                <a href="#ubicacion" rel="noopener noreferrer"  type="button" class="nav-link" target="_blank">Ubicación</a>
+                <a href="#contacto"  rel="noopener noreferrer" type="button" class="btn-nav" target="_blank">Contacto Directo</a>
+            </nav>
+    </main>         
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Innovación en Salud</span>
+                <h1>Clínica Médica y Especialidades de Diagnóstico en Buenos Aires</h1>
+                <p>Especialistas médicos certificados junto a la tecnología de diagnóstico más avanzada para ti y tu familia.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5491145678900?text=Hola,%20deseo%20solicitar%20un%20turno" rel="noopener noreferrer" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i> Solicitar Turno Inmediato
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary">Explorar Servicios</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Clínica NovaSalud" class="hero-img" width="800" height="380" loading="eager" fetchpriority="high" >
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESENTACIÓN DE LA CLÍNICA (NOSOTROS) -->
+    <section id="nosotros" class="section bg-light">
+        <div class="container">
+            <div class="grid grid-2 items-center">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Equipo Médico" class="img-rounded shadow" width="600" height="400" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80" alt="Consultorio Moderno" class="img-rounded shadow img-offset" width="600" height="400" loading="lazy" decoding="async">
+                </div>
+                <div class="about-text">
+                    <span class="section-tag">Nuestra Institución</span>
+                    <h2>Más de 15 años de compromiso médico ininterrumpido</h2>
+                    <p>En Clínica Médica NovaSalud combinamos vocación de servicio con infraestructura moderna, reduciendo los tiempos de espera y garantizando una experiencia hospitalaria digna y eficiente.</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <div>
+                                <h3>Especialistas de Élite</h3>
+                                <p>Plantel médico con certificación internacional.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-laptop-medical"></i>
+                            <div>
+                                <h3>Historial 100% Digital</h3>
+                                <p>Acceso seguro a resultados y estudios clínicos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 SERVICIOS MÉDICOS CON FILTRO DINÁMICO -->
+    <section id="servicios" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Áreas Médicas</span>
+                <h2>Nuestras 6 Especialidades</h2>
+                <p>Atención completa en un único centro ambulatorio.</p>
+                
+                <!-- Buscador de Servicios Interactivo (JS) -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="service-search" placeholder="Escribe para buscar un servicio (ej: cardio, pediatría)...">
+                </div>
+            </div>
+
+            <div class="grid grid-3" id="services-grid">
+                <!-- Servicio 1 -->
+                <article class="service-card" data-title="medicina general preventiva clínica">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80" alt="Medicina General"  width="600" height="400" loading="lazy" decoding="async">
+                    <div class="service-body">
+                        <h3>1. Medicina General y Preventiva</h3>
+                        <p>Chequeos integrales, control preventivo de salud y seguimiento personalizado de patologías crónicas.</p>
+                    </div>
+                </article>
+
+                <!-- Servicio 2 -->
+                <article class="service-card" data-title="cardiologia corazon doppler holter">
+                    <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=600&q=80" alt="Cardiología" width="600" height="400" loading="lazy" decoding="async" >
+                    <div class="service-body">
+                        <h3>2. Cardiología Avanzada</h3>
+                        <p>Estudios no invasivos, ecocardiogramas Doppler, electrocardiografía continua y chequeos cardiovasculares.</p>
+                    </div>
+                </article>
+
+                <!-- Servicio 3 -->
+                <article class="service-card" data-title="pediatria niños bebes infantil">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Pediatría" >
+                    <div class="service-body">
+                        <h3>3. Pediatría Integral</h3>
+                        <p>Atención desde recién nacidos hasta adolescentes, vacunatorio oficial y control de desarrollo.</p>
+                    </div>
+                </article>
+
+                <!-- Servicio 4 -->
+                <article class="service-card" data-title="diagnostico imagenes resonancia tomografia ecografia rayos x">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Diagnóstico por Imágenes" width="600" height="400" loading="lazy" decoding="async" >
+                    <div class="service-body">
+                        <h3>4. Diagnóstico por Imágenes</h3>
+                        <p>Resonador de alto campo magnético, tomografía axial computada multislice y ecografías 4D.</p>
+                    </div>
+                </article>
+
+                <!-- Servicio 5 -->
+                <article class="service-card" data-title="traumatologia kinesiologia huesos articulaciones rehabilitacion">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Traumatología">
+                    <div class="service-body">
+                        <h3>5. Traumatología y Kinesiología</h3>
+                        <p>Tratamiento de afecciones del sistema músculo-esquelético, lesiones deportivas y fisioterapia.</p>
+                    </div>
+                </article>
+
+                <!-- Servicio 6 -->
+                <article class="service-card" data-title="dermatologia piel estetica lunares">
+                    <img src="https://images.unsplash.com/photo-1512290900672-1f486438992e?auto=format&fit=crop&w=600&q=80" alt="Dermatología">
+                    <div class="service-body">
+                        <h3>6. Dermatología Clínica</h3>
+                        <p>Dermatoscopía de lesiones pigmentarias, tratamiento de acné, alergias y cuidado cutáneo especializado.</p>
+                    </div>
+                </article>
+            </div>
+            <p id="no-results" class="no-results hidden">No encontramos especialidades que coincidan con tu búsqueda.</p>
+        </div>
+    </section>
+
+    <!-- MULTIMEDIA (AUDIO & VIDEO) -->
+    <section id="multimedia" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Multimedia</span>
+                <h2>Recorre Nuestras Instalaciones</h2>
+            </div>
+
+            <div class="grid grid-2 items-center">
+                <!-- Video Institucional -->
+                <div class="media-card video-card">
+                    <div class="media-header">
+                        <span><i class="fa-solid fa-circle-play"></i> Video Institucional</span>
+                        <span class="badge-mini">HD 1080p</span>
+                    </div>
+                    <div class="video-container">
+                        <video controls preload="none" poster="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80">
+                            <source src="C:\Users\Estudiante\web clinica\video\Somos UHG - sub spa.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                    <p class="media-caption">Conoce nuestras salas de espera, quirófanos de alta complejidad y consultorios.</p>
+                </div>
+
+                <!-- Audio de Bienvenida / Podcast -->
+                <div class="media-card audio-card">
+                    <div class="audio-header-group">
+                        <div class="audio-icon-box">
+                            <i class="fa-solid fa-headphones-simple"></i>
+                        </div>
+                        <div>
+                            <h3>Palabras del Director Médico</h3>
+                            <p>Dr. Roberto Fontana — Protocolo Preventivo</p>
+                        </div>
+                    </div>
+                    <p class="audio-desc">Escucha este breve mensaje informativo con recomendaciones médicas clave para tu chequeo preventivo.</p>
+                    
+                    <div class="audio-player-wrapper">
+                        <audio id="clinic-audio" controls class="custom-audio" aria-controls preload="none">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            Tu navegador no soporta audio HTML5.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN (MAPA) -->
+    <section id="ubicacion" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Ubicación</span>
+                <h2>Dónde Estamos</h2>
+                <p>Instalaciones de fácil acceso con servicio de valet parking.</p>
+            </div>
+            
+            <div class="map-wrapper shadow">
+                <iframe 
+                    title="Mapa NovaSalud"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016887889447!2d-58.384150623498875!3d-34.60373888769395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" 
+                    loading="lazy">
+                </iframe>
+                <div class="map-footer">
+                    <span><i class="fa-solid fa-map-pin"></i> Av. Corrientes 1234, Centro Médico NovaSalud</span>
+                    <span class="tag-badge">Acceso Universal & Ambulancias</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO DIRECTO (SIN FORMULARIO) -->
+    <section id="contacto" class="section bg-dark text-white">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag text-cyan">Comunícate</span>
+                <h2 class="text-white">Canales de Contacto Inmediato</h2>
+                <p class="text-gray">Sin formularios. Selecciona la vía directa para hablar con nuestros coordinadores.</p>
+            </div>
+
+            <div class="grid grid-3 contact-grid">
+                <!-- WhatsApp -->
+                <div class="contact-card card-wa">
+                    <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <h3>WhatsApp Turnos</h3>
+                    <p>Atención instantánea vía chat para solicitar citas y autorizaciones.</p>
+                    <a href="https://wa.me/5491145678900?text=Hola,%20quisiera%20solicitar%20un%20turno%20médico" target="_blank" class="btn-contact">
+                        Abrir WhatsApp <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="contact-card card-phone">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Línea Telefónica</h3>
+                    <p>Central de turnos y guardia de emergencias clínicas.</p>
+                    <a href="tel:+5491145678900" class="btn-contact">
+                        Llamar: +54 11 4567-8900
+                    </a>
+                    <button class="btn-copy" data-copy="+54 11 4567-8900"><i class="fa-regular fa-copy"></i> Copiar número</button>
+                </div>
+
+                <!-- Correo -->
+                <div class="contact-card card-email">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>Correo Electrónico</h3>
+                    <p>Recepción de estudios, derivaciones médicas y administración.</p>
+                    <a href="mailto:turnos@novasaludclinica.com?subject=Consulta%20Médica" class="btn-contact">
+                        turnos@novasalud.com
+                    </a>
+                    <button class="btn-copy" data-copy="turnos@novasalud.com"><i class="fa-regular fa-copy"></i> Copiar email</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© 2026 Clínica Médica NovaSalud — Proyecto desarrollado con Inteligencia Artificial.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA (JS) -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Subir">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+</body>
+</html>
