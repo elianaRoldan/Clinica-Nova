@@ -7,6 +7,7 @@
     <meta name="description" content="Centro médico de alta complejidad en CABA. Atención en cardiología, pediatría, traumatología y diagnóstico por imágenes. Turnos inmediatos por WhatsApp.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://www.novasaludclinica.com/">
+    
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.novasaludclinica.com/">
@@ -20,56 +21,157 @@
     <meta name="twitter:title" content="Clínica Médica NovaSalud">
     <meta name="twitter:description" content="Especialidades médicas y turnos inmediatos.">
     <meta name="twitter:image" content="https://www.novasaludclinica.com/images/og-share-novasalud.jpg">
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Hoja de Estilos Separada -->
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <!-- Script Separado -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de Estilos Separada -->
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "Clínica Médica NovaSalud",
-  "image": "https://www.novasaludclinica.com/images/fachada.jpg",
-  "@id": "https://www.novasaludclinica.com/#clinic",
-  "url": "https://www.novasaludclinica.com",
-  "telephone": "+541145678900",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. Corrientes 1234",
-    "addressLocality": "Ciudad Autónoma de Buenos Aires",
-    "postalCode": "C1043",
-    "addressCountry": "AR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -34.6037389,
-    "longitude": -58.3841506
-  },
-  "openingHoursSpecification": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "08:00",
-      "closes": "20:00"
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Clínica Médica NovaSalud",
+      "image": "https://www.novasaludclinica.com/images/fachada.jpg",
+      "@id": "https://www.novasaludclinica.com/#clinic",
+      "url": "https://www.novasaludclinica.com",
+      "telephone": "+541145678900",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Corrientes 1234",
+        "addressLocality": "Ciudad Autónoma de Buenos Aires",
+        "postalCode": "C1043",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.6037389,
+        "longitude": -58.3841506
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "medicalSpecialty": [
+        "GeneralPractice",
+        "Cardiovascular",
+        "Pediatric",
+        "Dermatology",
+        "DiagnosticImaging",
+        "Orthopedic"
+      ]
     }
-  ],
-  "medicalSpecialty": [
-    "GeneralPractice",
-    "Cardiovascular",
-    "Pediatric",
-    "Dermatology",
-    "DiagnosticImaging",
-    "Orthopedic"
-  ]
-}
-</script>
+    </script>
+
+    <!-- Estilos específicos del formulario integrados con la estética de NovaSalud -->
+    <style>
+      .form-wrapper {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.2rem;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        color: #1e293b;
+      }
+      .form-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      @media (max-width: 640px) {
+        .form-grid-2 { grid-template-columns: 1fr; }
+        .form-wrapper { padding: 1.5rem; }
+      }
+      .form-group {
+        margin-bottom: 1.1rem;
+      }
+      .form-group label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: #334155;
+      }
+      .form-control-custom {
+        width: 100%;
+        padding: 0.75rem 0.9rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.9rem;
+        color: #0f172a;
+        background-color: #f8fafc;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        box-sizing: border-box;
+      }
+      .form-control-custom:focus {
+        outline: none;
+        border-color: #0284c7;
+        box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+        background-color: #ffffff;
+      }
+      .btn-submit-form {
+        width: 100%;
+        padding: 0.85rem;
+        background-color: #0284c7;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .btn-submit-form:hover {
+        background-color: #0369a1;
+      }
+      .btn-submit-form:disabled {
+        background-color: #94a3b8;
+        cursor: not-allowed;
+      }
+      .form-status-box {
+        margin-top: 1rem;
+        padding: 0.85rem;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        text-align: center;
+        display: none;
+      }
+      .form-status-success {
+        background-color: #ecfdf5;
+        border: 1px solid #a7f3d0;
+        color: #065f46;
+      }
+      .form-status-error {
+        background-color: #fef2f2;
+        border: 1px solid #fecaca;
+        color: #991b1b;
+      }
+      .contact-layout-split {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+      @media (max-width: 968px) {
+        .contact-layout-split { grid-template-columns: 1fr; }
+      }
+    </style>
 </head>
 <body>
 
@@ -83,7 +185,6 @@
     <div class="topbar">
         <div class="container topbar-container">
             <div class="topbar-info">
-                <!-- Estado en vivo calculado por JS -->
                 <span id="live-status" class="status-badge">
                     <span class="status-dot"></span> Verificando estado...
                 </span>
@@ -114,16 +215,15 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-    <main id="main-content">        <!-- Menú de Navegación -->
+            <!-- Menú de Navegación -->
             <nav id="nav-links" class="nav-links">
-                <a href="#inicio" rel="noopener noreferrer" type="button" class="nav-link active" target="_blank" >Inicio</a>
-                <a href="#nosotros" rel="noopener noreferrer" type="button" class="nav-link" target="_blank">Nosotros</a>
-                <a href="#servicios" rel="noopener noreferrer" type="button" class="nav-link" target="_blank">Servicios</a>
-                <a href="#multimedia" rel="noopener noreferrer" type="button" class="nav-link" target="_blank">Instalaciones</a>
-                <a href="#ubicacion" rel="noopener noreferrer"  type="button" class="nav-link" target="_blank">Ubicación</a>
-                <a href="#contacto"  rel="noopener noreferrer" type="button" class="btn-nav" target="_blank">Contacto Directo</a>
-            </nav>
-    </main>         
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#multimedia" class="nav-link">Instalaciones</a>
+                <a href="#ubicacion" class="nav-link">Ubicación</a>
+                <a href="#contacto" class="btn-nav">Solicitar Turno</a>
+            </nav>     
         </div>
     </header>
 
@@ -135,14 +235,14 @@
                 <h1>Clínica Médica y Especialidades de Diagnóstico en Buenos Aires</h1>
                 <p>Especialistas médicos certificados junto a la tecnología de diagnóstico más avanzada para ti y tu familia.</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/5491145678900?text=Hola,%20deseo%20solicitar%20un%20turno" rel="noopener noreferrer" target="_blank" class="btn btn-primary">
-                        <i class="fa-brands fa-whatsapp"></i> Solicitar Turno Inmediato
+                    <a href="#contacto" class="btn btn-primary">
+                        <i class="fa-solid fa-calendar-check"></i> Solicitar Turno / Presupuesto
                     </a>
                     <a href="#servicios" class="btn btn-secondary">Explorar Servicios</a>
                 </div>
             </div>
             <div class="hero-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Clínica NovaSalud" class="hero-img" width="800" height="380" loading="eager" fetchpriority="high" >
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Clínica NovaSalud" class="hero-img" width="800" height="380" loading="eager" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -152,8 +252,8 @@
         <div class="container">
             <div class="grid grid-2 items-center">
                 <div class="about-images">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Equipo Médico" class="img-rounded shadow" width="600" height="400" loading="lazy" decoding="async">
-                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80" alt="Consultorio Moderno" class="img-rounded shadow img-offset" width="600" height="400" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Equipo Médico" class="img-rounded shadow" width="600" height="400" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80" alt="Consultorio Moderno" class="img-rounded shadow img-offset" width="600" height="400" loading="lazy">
                 </div>
                 <div class="about-text">
                     <span class="section-tag">Nuestra Institución</span>
@@ -196,43 +296,38 @@
             </div>
 
             <div class="grid grid-3" id="services-grid">
-                <!-- Servicio 1 -->
                 <article class="service-card" data-title="medicina general preventiva clínica">
-                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80" alt="Medicina General"  width="600" height="400" loading="lazy" decoding="async">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80" alt="Medicina General" width="600" height="400" loading="lazy">
                     <div class="service-body">
                         <h3>1. Medicina General y Preventiva</h3>
                         <p>Chequeos integrales, control preventivo de salud y seguimiento personalizado de patologías crónicas.</p>
                     </div>
                 </article>
 
-                <!-- Servicio 2 -->
                 <article class="service-card" data-title="cardiologia corazon doppler holter">
-                    <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=600&q=80" alt="Cardiología" width="600" height="400" loading="lazy" decoding="async" >
+                    <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=600&q=80" alt="Cardiología" width="600" height="400" loading="lazy">
                     <div class="service-body">
                         <h3>2. Cardiología Avanzada</h3>
                         <p>Estudios no invasivos, ecocardiogramas Doppler, electrocardiografía continua y chequeos cardiovasculares.</p>
                     </div>
                 </article>
 
-                <!-- Servicio 3 -->
                 <article class="service-card" data-title="pediatria niños bebes infantil">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Pediatría" >
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Pediatría">
                     <div class="service-body">
                         <h3>3. Pediatría Integral</h3>
                         <p>Atención desde recién nacidos hasta adolescentes, vacunatorio oficial y control de desarrollo.</p>
                     </div>
                 </article>
 
-                <!-- Servicio 4 -->
                 <article class="service-card" data-title="diagnostico imagenes resonancia tomografia ecografia rayos x">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Diagnóstico por Imágenes" width="600" height="400" loading="lazy" decoding="async" >
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Diagnóstico por Imágenes" width="600" height="400" loading="lazy">
                     <div class="service-body">
                         <h3>4. Diagnóstico por Imágenes</h3>
                         <p>Resonador de alto campo magnético, tomografía axial computada multislice y ecografías 4D.</p>
                     </div>
                 </article>
 
-                <!-- Servicio 5 -->
                 <article class="service-card" data-title="traumatologia kinesiologia huesos articulaciones rehabilitacion">
                     <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Traumatología">
                     <div class="service-body">
@@ -241,7 +336,6 @@
                     </div>
                 </article>
 
-                <!-- Servicio 6 -->
                 <article class="service-card" data-title="dermatologia piel estetica lunares">
                     <img src="https://images.unsplash.com/photo-1512290900672-1f486438992e?auto=format&fit=crop&w=600&q=80" alt="Dermatología">
                     <div class="service-body">
@@ -254,47 +348,40 @@
         </div>
     </section>
 
-    <!-- MULTIMEDIA (AUDIO & VIDEO) -->
+    <!-- MULTIMEDIA -->
     <section id="multimedia" class="section bg-light">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-tag">Multimedia</span>
                 <h2>Recorre Nuestras Instalaciones</h2>
             </div>
-
             <div class="grid grid-2 items-center">
-                <!-- Video Institucional -->
                 <div class="media-card video-card">
                     <div class="media-header">
                         <span><i class="fa-solid fa-circle-play"></i> Video Institucional</span>
                         <span class="badge-mini">HD 1080p</span>
                     </div>
                     <div class="video-container">
-                        <video controls poster="C:\Users\Estudiante\web clinica\video\Somos UHG - sub spa.mp4">
-                            <source src="C:\Users\Estudiante\web clinica\video\Somos UHG - sub spa.mp4" type="video/mp4">
-                            Tu navegador no soporta el formato de video.
+                        <video controls poster="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                            Tu navegador no soporta video.
                         </video>
                     </div>
                     <p class="media-caption">Conoce nuestras salas de espera, quirófanos de alta complejidad y consultorios.</p>
                 </div>
 
-                <!-- Audio de Bienvenida / Podcast -->
                 <div class="media-card audio-card">
                     <div class="audio-header-group">
-                        <div class="audio-icon-box">
-                            <i class="fa-solid fa-headphones-simple"></i>
-                        </div>
+                        <div class="audio-icon-box"><i class="fa-solid fa-headphones-simple"></i></div>
                         <div>
                             <h3>Palabras del Director Médico</h3>
                             <p>Dr. Roberto Fontana — Protocolo Preventivo</p>
                         </div>
                     </div>
                     <p class="audio-desc">Escucha este breve mensaje informativo con recomendaciones médicas clave para tu chequeo preventivo.</p>
-                    
                     <div class="audio-player-wrapper">
-                        <audio id="clinic-audio" controls class="custom-audio" aria-controls preload="none">
+                        <audio controls class="custom-audio" preload="none">
                             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-                            Tu navegador no soporta audio HTML5.
                         </audio>
                     </div>
                 </div>
@@ -310,7 +397,6 @@
                 <h2>Dónde Estamos</h2>
                 <p>Instalaciones de fácil acceso con servicio de valet parking.</p>
             </div>
-            
             <div class="map-wrapper shadow">
                 <iframe 
                     title="Mapa NovaSalud"
@@ -325,46 +411,109 @@
         </div>
     </section>
 
-    <!-- CONTACTO DIRECTO (SIN FORMULARIO) -->
+    <!-- CONTACTO Y SOLICITUD DE TURNO / PRESUPUESTO (BACKEND INTEGRADO) -->
     <section id="contacto" class="section bg-dark text-white">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag text-cyan">Comunícate</span>
-                <h2 class="text-white">Canales de Contacto Inmediato</h2>
-                <p class="text-gray">Sin formularios. Selecciona la vía directa para hablar con nuestros coordinadores.</p>
+            <div class="section-header text-center mb-5">
+                <span class="section-tag text-cyan">Atención al Paciente</span>
+                <h2 class="text-white">Solicitá tu Turno o Presupuesto</h2>
+                <p class="text-gray">Completá el formulario para registrar tu solicitud en nuestro sistema. Recibirás una copia de confirmación en tu correo.</p>
             </div>
 
-            <div class="grid grid-3 contact-grid">
-                <!-- WhatsApp -->
-                <div class="contact-card card-wa">
-                    <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
-                    <h3>WhatsApp Turnos</h3>
-                    <p>Atención instantánea vía chat para solicitar citas y autorizaciones.</p>
-                    <a href="https://wa.me/5491145678900?text=Hola,%20quisiera%20solicitar%20un%20turno%20médico" target="_blank" class="btn-contact">
-                        Abrir WhatsApp <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+            <div class="contact-layout-split">
+                <!-- Columna Izquierda: Tarjetas Rápidas de Contacto -->
+                <div class="contact-cards-stack">
+                    <div class="contact-card card-wa mb-3">
+                        <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <h3>WhatsApp Directo</h3>
+                        <p>Atención instantánea para consultas rápidas de guardia.</p>
+                        <a href="https://wa.me/5491145678900?text=Hola,%20quisiera%20consultar%20por%20un%20turno" target="_blank" class="btn-contact">
+                            Abrir WhatsApp <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-card card-phone mb-3">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <h3>Central Telefónica</h3>
+                        <p>Línea rotativa de lunes a sábados de 08:00 a 20:00.</p>
+                        <a href="tel:+5491145678900" class="btn-contact">+54 11 4567-8900</a>
+                    </div>
+
+                    <div class="contact-card card-email">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <h3>Mesa de Entradas</h3>
+                        <p>Recepción de estudios y derivaciones.</p>
+                        <a href="mailto:turnos@novasaludclinica.com" class="btn-contact">turnos@novasaludclinica.com</a>
+                    </div>
                 </div>
 
-                <!-- Teléfono -->
-                <div class="contact-card card-phone">
-                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                    <h3>Línea Telefónica</h3>
-                    <p>Central de turnos y guardia de emergencias clínicas.</p>
-                    <a href="tel:+5491145678900" class="btn-contact">
-                        Llamar: +54 11 4567-8900
-                    </a>
-                    <button class="btn-copy" data-copy="+54 11 4567-8900"><i class="fa-regular fa-copy"></i> Copiar número</button>
-                </div>
+                <!-- Columna Derecha: Formulario Conectado a Google Sheets -->
+                <div class="form-wrapper">
+                    <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.3rem; color: #0f172a;">
+                        <i class="fa-solid fa-notes-medical" style="color: #0284c7; margin-right: 0.5rem;"></i> Formulario de Solicitud
+                    </h3>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">
+                        Los datos se registran directamente en nuestra central de turnos.
+                    </p>
 
-                <!-- Correo -->
-                <div class="contact-card card-email">
-                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                    <h3>Correo Electrónico</h3>
-                    <p>Recepción de estudios, derivaciones médicas y administración.</p>
-                    <a href="mailto:turnos@novasaludclinica.com?subject=Consulta%20Médica" class="btn-contact">
-                        turnos@novasalud.com
-                    </a>
-                    <button class="btn-copy" data-copy="turnos@novasalud.com"><i class="fa-regular fa-copy"></i> Copiar email</button>
+                    <form id="turno-form">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="nombre">Nombre y apellido *</label>
+                                <input type="text" id="nombre" class="form-control-custom" placeholder="Ej. Carlos Mendoza" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" class="form-control-custom" placeholder="tu@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono / WhatsApp *</label>
+                                <input type="tel" id="telefono" class="form-control-custom" placeholder="+54 11 1234-5678" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="especialidad">Especialidad de interés *</label>
+                                <select id="especialidad" class="form-control-custom" required>
+                                    <option value="" disabled selected>Seleccioná una especialidad...</option>
+                                    <option value="Medicina General y Preventiva">Medicina General y Preventiva</option>
+                                    <option value="Cardiología Avanzada">Cardiología Avanzada</option>
+                                    <option value="Pediatría Integral">Pediatría Integral</option>
+                                    <option value="Diagnóstico por Imágenes">Diagnóstico por Imágenes</option>
+                                    <option value="Traumatología y Kinesiología">Traumatología y Kinesiología</option>
+                                    <option value="Dermatología Clínica">Dermatología Clínica</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cobertura">Cobertura Médica / Plan *</label>
+                            <select id="cobertura" class="form-control-custom" required>
+                                <option value="" disabled selected>Seleccioná tu cobertura o presupuesto...</option>
+                                <option value="Particular / Presupuesto privado">Particular / Sin obra social (Presupuesto)</option>
+                                <option value="OSDE (210 / 310 / 410 / 450 / 510)">OSDE</option>
+                                <option value="Swiss Medical">Swiss Medical</option>
+                                <option value="Galeno">Galeno</option>
+                                <option value="Medifé">Medifé</option>
+                                <option value="Omint">Omint</option>
+                                <option value="Otra obra social / prepaga">Otra obra social / prepaga</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Motivo de consulta o preferencia horaria</label>
+                            <textarea id="mensaje" class="form-control-custom" rows="3" placeholder="Indicanos disponibilidad de días/horarios o detalles de tu consulta..."></textarea>
+                        </div>
+
+                        <button type="submit" id="btn-enviar-turno" class="btn-submit-form">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar Solicitud de Turno
+                        </button>
+
+                        <div id="form-status" class="form-status-box"></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -381,5 +530,57 @@
     <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Subir">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+
+    <!-- CONEXIÓN DEL FORMULARIO CON GOOGLE APPS SCRIPT -->
+    <script>
+        // ⚠️ REEMPLAZAR ESTA URL CON TU PROPIA URL DE GOOGLE APPS SCRIPT (/exec)
+        const URL_BACKEND_NOVASALUD = "https://script.google.com/macros/s/AKfycbyM54mw9v976e-MJeYud9wYBW8tt6XSq7wNF-_kqSs-rNuRJaYt5DLesD8RFc62c14/exec";
+
+        document.getElementById("turno-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById("btn-enviar-turno");
+            const statusBox = document.getElementById("form-status");
+
+            const datos = {
+                nombre: document.getElementById("nombre").value.trim(),
+                email: document.getElementById("email").value.trim().toLowerCase(),
+                telefono: document.getElementById("telefono").value.trim(),
+                especialidad: document.getElementById("especialidad").value,
+                cobertura: document.getElementById("cobertura").value,
+                mensaje: document.getElementById("mensaje").value.trim()
+            };
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Registrando solicitud...';
+            statusBox.style.display = "none";
+
+            fetch(URL_BACKEND_NOVASALUD, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8"
+                },
+                body: JSON.stringify(datos)
+            })
+            .then(function(res) {
+                return res.text();
+            })
+            .then(function() {
+                statusBox.style.display = "block";
+                statusBox.className = "form-status-box form-status-success";
+                statusBox.innerHTML = '<i class="fa-solid fa-circle-check"></i> <strong>¡Solicitud enviada con éxito!</strong><br><small>Guardamos tu turno y enviamos una confirmación a <strong>' + datos.email + '</strong>.</small>';
+                document.getElementById("turno-form").reset();
+            })
+            .catch(function() {
+                statusBox.style.display = "block";
+                statusBox.className = "form-status-box form-status-error";
+                statusBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Ocurrió un error al registrar el turno. Por favor comunicate vía WhatsApp.';
+            })
+            .finally(function() {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar Solicitud de Turno';
+            });
+        });
+    </script>
 </body>
 </html>
